@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import { AppRegistry, Image, Text, View, StyleSheet } from 'react-native';
+
+export default class Bananas extends Component {
+  render() {
+    let pic = {
+      uri: 'http://cdn-image.travelandleisure.com/sites/default/files/1492616731/waterfall-le-morne-mauritius-UNDERWATERFALL0417.jpg'
+    };
+
+    return (
+      <View style={styles.container}>
+		<Image source={pic} style={{width: 400, height: 200}}>
+        <Text style= {styles.textstyle}> Discover Mauritius</Text>
+        </Image>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+	flexDirection:'row',
+    backgroundColor: '#87cefa',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  textstyle: {
+	  fontSize:30,
+	  fontWeight:'bold',
+	  fontStyle:'italic',
+	  color:'white',
+	  position:'absolute',
+  },
+});
+
+
+
